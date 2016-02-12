@@ -1,3 +1,4 @@
 .vagrant
 
-spring/.gradle
+*/.gradle
+*/build/*
