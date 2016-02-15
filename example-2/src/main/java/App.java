@@ -8,9 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
-import java.util.List;
-import java.util.Iterator;
-
 @EnableAutoConfiguration
 @ComponentScan
 public class App implements CommandLineRunner {
@@ -22,11 +19,7 @@ public class App implements CommandLineRunner {
     customerService.save(new Customer(1, "Jimin", "Han"));
     customerService.save(new Customer(2, "Chaewon", "Moon"));
 
-    List<Customer> customers = customerService.findAll();
-    for (Iterator i = customers.iterator(); i.hasNext(); ) {
-      Customer customer = (Customer) i.next();
-      System.out.println(customer);
-    }
+    customerService.findAll().forEach(System.out::println);
   }
 
   public static void main(String[] args) {

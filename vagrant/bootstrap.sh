@@ -1,9 +1,10 @@
 #!/bin/bash
 sudo add-apt-repository ppa:cwchien/gradle
+sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
 
 # java SDK (OpenJDK)
-sudo apt-get install -y default-jdk
+sudo apt-get install -y openjdk-8-jdk
 
 # Gradle
 sudo apt-get install -y gradle
