@@ -1,0 +1,3 @@
+spring:
+  datasource:
+    sqlScriptEncoding: UTF-8
